@@ -1,0 +1,19 @@
+
+<!-- <h1 *ngIf="dataFromChild">{{ dataFromChild?.name + '' + dataFromChild?.gender }}</h1> -->
+
+<!-- <br>
+<button (click)="nextEmployee()" class="btn btn-primary">View Next Employee</button>
+<br>
+<br>
+<app-display-employee class="pointerCursor" [employees]="employeeToDisplay" [employeeId]="employeeToDisplay.id" (notify)="handleNotify($event)"></app-display-employee>
+
+<br> -->
+<br>
+
+<!-- <h1>Cards</h1> -->
+<div class="form-group">
+  <input type="text" class="form-control" placeholder="Search By Name" style="width: 300px;" [(ngModel)]="searchTerm" name="search" id="search">
+</div>
+<div class="panel panel-primary" *ngFor="let employee of employees | employeeFilter: searchTerm">
+  <app-display-employee [employees]="employee" (notify)="handleNotify($event)"></app-display-employee>
+</div>

@@ -1,0 +1,84 @@
+<div class="panel panel-primary" (click)="handleClick()">
+<div class="panel-heading pointerCursor" (click)="isHidden = !isHidden">
+  <h3 class="panel-title">{{employees.name}}</h3>
+</div>
+<div class="panel-body" [hidden]="isHidden">
+  <div class="col-md-10">
+    <div class="row vertical-align">
+      <div class="col-md-4">
+        <img class="imageClass" [src]="employees.photoPath" alt="">
+      </div>
+      <div class="col-md-8">
+        <div class="row">
+          <div class="col-md-6">
+            Gender
+          </div>
+          <div class="col-md-6">
+            : {{employees.gender}}
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-md-6">
+            Date of Birth
+          </div>
+          <div class="col-md-6">
+            : {{employees.dateOfBirth | date}}
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-md-6">
+            Contact Preference
+          </div>
+          <div class="col-md-6">
+            : {{employees.contactPreference}}
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-md-6">
+            Email
+          </div>
+          <div class="col-md-6">
+            : {{employees.email}}
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-md-6">
+            Phone
+          </div>
+          <div class="col-md-6">
+            : {{employees.phoneNumber}}
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-md-6">
+            Department
+          </div>
+          <div class="col-md-6" [ngSwitch]="employees.department">
+            :
+            <span *ngSwitchCase="1">Help Desk</span>
+            <span *ngSwitchCase="2">HR</span>
+            <span *ngSwitchCase="3">IT</span>
+            <span *ngSwitchCase="4">Payroll</span>
+            <span *ngSwitchCase="5">Admin</span>
+            <span *ngSwitchDefault>N/A</span>
+
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-md-6">
+            IsActive
+          </div>
+          <div class="col-md-6">
+            : {{employees.isActive}}
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="panel-footer" [hidden]="isHidden">
+  <button class="btn btn-primary" (click)="viewEmployee(employees.id)">View</button>
+  <button class="btn btn-primary" (click)="edit(employees.id)">Edit</button>
+  <button class="btn btn-danger" (click)="delete()">Delete</button>
+</div>
+</div>

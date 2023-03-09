@@ -1,0 +1,26 @@
+{
+  "employees": [
+    {
+      "id": 1,
+      "name": "Eric",
+      "gender": "Male",
+      "contactPreference": "Email",
+      "email": "eric.hausman.m@gmail.com",
+      "dateOfBirth": "new Date(June 30, 2001 23:15:30 UTC)",
+      "department": "3",
+      "isActive": true,
+      "photoPath": "https://avatars.githubusercontent.com/u/109166965?v=4"
+    },
+    {
+      "id": 2,
+      "name": "Mary",
+      "gender": "Female",
+      "contactPreference": "Phone",
+      "phoneNumber": 24988739500,
+      "dateOfBirth": "new Date(June 30, 2001 23:15:30 UTC)",
+      "department": "2",
+      "isActive": true,
+      "photoPath": "https://pixlr.com/images/index/remove-bg.webp"
+    }
+  ]
+}
